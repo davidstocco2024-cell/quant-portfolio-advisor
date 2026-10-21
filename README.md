@@ -1,63 +1,63 @@
 # 📈 Quant Portfolio Advisor & Risk Analytics
 
-Un sistema cuantitativo de análisis financiero, gestión de riesgos y optimización de portafolios desarrollado en Python. Este proyecto está diseñado para asistir a asesores de inversión y analistas en la toma de decisiones financieras basadas en datos, combinando la Teoría Moderna de Portafolios (MPT) con métricas avanzadas de riesgo.
+A quantitative financial analysis, risk management, and portfolio optimization system built in Python. This project is designed to assist investment advisors and financial analysts in data-driven decision-making, combining Modern Portfolio Theory (MPT) with advanced risk metrics.
 
 ---
 
-## 🎯 Objetivo del Proyecto
+## 🎯 Project Objectives
 
-Proporcionar un motor analítico integral que permita:
-- Evaluar el rendimiento histórico y la volatilidad ajustada por riesgo de activos financieros (Acciones, CEDEARs, Criptoactivos e Índices).
-- Identificar y medir riesgos de cola (*tail risk*) mediante métricas cuantitativas avanzadas.
-- Optimizar la asignación de capital (*Asset Allocation*) para construir portafolios eficientes basados en perfiles de riesgo del inversor.
-
----
-
-## 🛠️ Stack Tecnológico
-
-- **Lenguaje:** Python 3.10+
-- **Análisis de Datos:** `pandas`, `numpy`
-- **Extracción de Mercado:** `yfinance`
-- **Optimización & Riesgo:** `scipy`, `PyPortfolioOpt`
-- **Visualización & Dashboard:** `streamlit`, `plotly` *(en desarrollo)*
+Provide a comprehensive analytical engine to:
+- Evaluate historical performance and risk-adjusted volatility of financial assets (Equities, ADRs/CEDEARs, Crypto, and Market Indices).
+- Identify and quantify tail risk using advanced quantitative metrics.
+- Optimize asset allocation to build efficient portfolios tailored to investor risk profiles.
 
 ---
 
-## 🧠 Métricas y Modelos Financieros
+## 🛠️ Tech Stack
 
-El motor analiza y calcula automáticamente:
-- **Rendimientos:** Retornos diarios simples y logarítmicos, rendimiento acumulado.
-- **Riesgo & Volatilidad:** Volatilidad anualizada, *Maximum Drawdown (MDD)*.
-- **Ratios de Performance:** *Sharpe Ratio*, *Sortino Ratio* (penalización exclusiva de volatilidad negativa).
-- **Estadística de Distribución:** Sesgo (*Skewness*) y Curtosis (*Kurtosis*) para detectar colas pesadas y riesgo de evento.
+- **Language:** Python 3.10+
+- **Data Analysis:** `pandas`, `numpy`
+- **Market Data Retrieval:** `yfinance`
+- **Optimization & Risk Modeling:** `scipy`, `PyPortfolioOpt`
+- **Visualization & Dashboard:** `streamlit`, `plotly` *(in active development)*
 
 ---
 
-## 📂 Estructura del Proyecto
+## 🧠 Financial Metrics & Models
+
+The engine automatically computes:
+- **Returns:** Simple daily returns, logarithmic returns, cumulative returns.
+- **Risk & Volatility:** Annualized volatility, Maximum Drawdown (MDD).
+- **Performance Ratios:** Sharpe Ratio, Sortino Ratio (isolating downside volatility).
+- **Distribution Analytics:** Skewness and Kurtosis to detect fat tails and black swan risks.
+
+---
+
+## 📂 Project Structure
 
 ```text
 quant-portfolio-advisor/
 │
 ├── app/
-│   └── dashboard.py          # Interfaz interactiva en Streamlit
+│   └── dashboard.py          # Interactive Streamlit interface
 │
 ├── src/
-│   ├── data/                 # Módulos de descarga y preparación de precios
+│   ├── data/                 # Market data extraction and cleaning
 │   │   └── market_data.py
 │   │
-│   ├── analytics/            # Motor de análisis financiero y riesgo
+│   ├── analytics/            # Quantitative analytics and risk engine
 │   │   ├── returns.py
 │   │   ├── risk_metrics.py
 │   │   └── portfolio_optimizer.py
 │   │
-│   ├── alerts/               # Motor de reglas y análisis con IA
+│   ├── alerts/               # Rule engine and AI sentiment analysis
 │   │   ├── rules_engine.py
 │   │   └── ai_news.py
 │   │
-│   └── database/             # Gestión de la base de datos de posiciones
+│   └── database/             # Portfolio and position persistence
 │       ├── db_manager.py
 │       └── schema.sql
 │
-├── main.py                   # Script orquestador principal
-├── requirements.txt          # Dependencias del proyecto
+├── main.py                   # Main orchestrator script
+├── requirements.txt          # Project dependencies
 └── README.md
